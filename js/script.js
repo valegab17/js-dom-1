@@ -3,4 +3,7 @@
 Al click del bottone, la lampadina dovrà accendersi (dovremo quindi utilizzare l’immagine della lampadina accesa, sempre in allegato) */
 
 
-//
+//inserisco img e button in js 
+
+const lampadina = document.getElementById('lampoff');
+const bottone = document.getElementById('buttOn');
