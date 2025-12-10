@@ -10,8 +10,23 @@ const button = document.getElementById('buttOn');
 
 //devo dire al mio js che quando clicco buttOn la lampadina si deve accendere e cambia anche scritta, lo faccio aggiungendo addEventListener e una definizione di funzione
 
-button.addEventListener('click', function(){
+/* button.addEventListener('click', function(){
     lamp.src = "./img/yellow_lamp.png";
     lamp.alt = "lampadina_accesa"     //Ho anche cambiato il nome dell'alt così da far risultare tutto il tag più chiaro
     button.textContent = "Spegni"
-});
+}); */
+
+//BONUS 
+
+//SE la mia lampadina è spenta (quindi ha il src white_lamp) allora cambia la src, l'alt e il testo del bottone
+button.addEventListener('click', function(){
+    if (lamp.src.includes("white_lamp")){   //ho utilizzato includes per dire "se trovi white_lamp all'interno di img allora applica questa funzione"
+        lamp.src = "./img/yellow_lamp.png";
+        lamp.alt = "lampadina_accesa";
+        button.textContent = "Spegni";
+    } else{
+        lamp.src = "./img/white_lamp.png";
+        lamp.alt = "lampadina_spenta";
+        button.textContent = "Accendi";
+    }
+    } )
